@@ -60,3 +60,37 @@ if __name__ == "__main__":
 
     print(pacific.describe())
     print(pacific.sound())
+
+##Activity 2: Polymorphism Challenge
+# Polymorphism Challenge: Animals and Vehicles with move() method
+
+# Base class: Entity
+class Entity:
+    def move(self):
+        raise NotImplementedError("Subclasses must implement this method.")
+
+# Subclass: Car
+class Car(Entity):
+    def move(self):
+        return "Driving"
+
+# Subclass: Plane
+class Plane(Entity):
+    def move(self):
+        return "Flying"
+
+# Subclass: Dog
+class Dog(Entity):
+    def move(self):
+        return "Running"
+
+# Subclass: Fish
+class Fish(Entity):
+    def move(self):
+        return "Swimming"
+
+# Demonstrating polymorphism
+if __name__ == "__main__":
+    entities = [Car(), Plane(), Dog(), Fish()]
+    for entity in entities:
+        print(entity.move())
